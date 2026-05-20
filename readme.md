@@ -1,14 +1,16 @@
-## ALauncher
+<div align="center">
+  <img src="https://raw.githubusercontent.com/overskul/ALauncher/refs/heads/main/res/logo.png" width="100">
+  <h1>ALauncher</h1>
+  <p>Android launcher but as a code editor.</p>
+</div>
 
-Android launcher but as a code editor.
+> [!WARNING]
+> this project is a **experimental**, not guaranteed stable, and for Android-only.
 
 ## Overview
 **ALauncher** is a fork of the [Acode editor](https://github.com/Acode-Foundation/Acode) `(ACE version)` transformed into a full Android launcher that can open and manage **Android apps** while also providing a **built-in code editing** experience.
 
 It replaces the traditional app drawer with a **launcher-based** interface where apps, tools, and coding environments live together in one place.
-
-> [!WARNING]
-> this project is a **experimental**, not guaranteed stable, and for Android-only. 
 
 ## Features
 - Full Android launcher functionality. 
