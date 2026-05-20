@@ -4,11 +4,11 @@ const { promisify } = require("node:util");
 const exec = promisify(require("node:child_process").exec);
 
 (async () => {
-	const AD_APP_ID = "ca-app-pub-5911839694379275~4255791238";
+	const AD_APP_ID = null; // "ca-app-pub-5911839694379275~4255791238";
 	const CONFIG_ID = /id="([a-z.]+")/;
 	const HTML_ID = /<title>[a-z.]+<\/title>/;
-	const ID_PAID = "com.foxdebug.acode";
-	const ID_FREE = "com.foxdebug.acodefree";
+	const ID_PAID = "overskul.alauncher";
+	const ID_FREE = ID_PAID; // "com.foxdebug.acodefree";
 	const arg = process.argv[2];
 	const arg2 = process.argv[3];
 	const platformsDir = path.resolve(__dirname, "../platforms/");
@@ -49,13 +49,13 @@ const exec = promisify(require("node:child_process").exec);
 			babelrc.compact = true;
 		}
 
-		if (arg2 === "free") {
-			logo = logoTextFree;
-			id = ID_FREE;
-		} else {
+		// if (arg2 === "free") {
+			// logo = logoTextFree;
+			// id = ID_FREE;
+		// } else {
 			logo = logoTextPaid;
 			id = ID_PAID;
-		}
+		// }
 
 		fs.writeFileSync(babelrcpath, babelrcText, "utf8");
 
@@ -67,43 +67,43 @@ const exec = promisify(require("node:child_process").exec);
 			babelrcText = JSON.stringify(babelrc, undefined, 2);
 
 			fs.writeFileSync(htmlpath, html, "utf8");
-			fs.writeFileSync(logopath, logo, "utf8");
+			// fs.writeFileSync(logopath, logo, "utf8");
 			fs.writeFileSync(configpath, config, "utf8");
 
-			for (let platform of platforms) {
-				if (!platform) continue;
+			// for (let platform of platforms) {
+				// if (!platform) continue;
 
-				promises.push(
-					(async () => {
-						console.log(
-							`|--- Preparing platform ${platform.toUpperCase()} ---|`,
-						);
+				// promises.push(
+					// (async () => {
+						// console.log(
+							// `|--- Preparing platform ${platform.toUpperCase()} ---|`,
+						// );
 
-						if (id === ID_FREE) {
-							console.log(`|--- Installing Admob ---|`);
-							await exec(
-								`cordova plugin add cordova-plugin-consent@2.4.0 --save`,
-							);
-							await exec(
-								`cordova plugin add admob-plus-cordova@2.0.0-alpha.19 --save --variable APP_ID_ANDROID="${AD_APP_ID}" --variable PLAY_SERVICES_VERSION="23.2.0"`,
-							);
-							console.log("DONE! Installing admob-plus-cordova");
-						} else {
-							console.log(`|--- Removing Admob ---|`);
-							await exec(`cordova plugin remove cordova-plugin-consent --save`);
-							await exec(`cordova plugin remove admob-plus-cordova --save`);
-							console.log("DONE! Removing admob-plus-cordova");
-						}
+						// if (id === ID_FREE) {
+							// console.log(`|--- Installing Admob ---|`);
+							// await exec(
+								// `cordova plugin add cordova-plugin-consent@2.4.0 --save`,
+							// );
+							// await exec(
+								// `cordova plugin add admob-plus-cordova@2.0.0-alpha.19 --save --variable APP_ID_ANDROID="${AD_APP_ID}" --variable PLAY_SERVICES_VERSION="23.2.0"`,
+							// );
+							// console.log("DONE! Installing admob-plus-cordova");
+						// } else {
+							// console.log(`|--- Removing Admob ---|`);
+							// await exec(`cordova plugin remove cordova-plugin-consent --save`);
+							// await exec(`cordova plugin remove admob-plus-cordova --save`);
+							// console.log("DONE! Removing admob-plus-cordova");
+						// }
 
-						console.log(`|--- Reinstalling platform ---|`);
-						const { stderr } = await exec(`npm run clean`);
-						if (stderr) console.error(stderr);
-						else console.log("DONE! Reinstalling platform");
-					})(),
-				);
-			}
+						// console.log(`|--- Reinstalling platform ---|`);
+						// const { stderr } = await exec(`npm run clean`);
+						// if (stderr) console.error(stderr);
+						// else console.log("DONE! Reinstalling platform");
+					// })(),
+				// );
+			// }
 
-			await Promise.all(promises);
+			// await Promise.all(promises);
 		}
 		process.exit(0);
 	} catch (error) {

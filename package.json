@@ -1,8 +1,8 @@
 {
-  "name": "com.foxdebug.acode",
-  "displayName": "Acode",
-  "version": "1.11.8",
-  "description": "Acode is a code editor for android",
+  "name": "overskul.alauncher",
+  "displayName": "ALauncher",
+  "version": "0.0.1",
+  "description": "Android launcher but as a code editor",
   "scripts": {
     "lang": "node ./utils/lang.js",
     "build": "sh utils/scripts/build.sh",
@@ -16,9 +16,11 @@
     "updateAce": "node ./utils/updateAce.js"
   },
   "keywords": [
-    "ecosystem:cordova"
+    "ecosystem:cordova",
+    "editor",
+    "launcher"
   ],
-  "author": "Foxdebug (Ajit Kumar)",
+  "author": "overskul",
   "license": "MIT",
   "cordova": {
     "plugins": {
@@ -48,12 +50,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/deadlyjack/acode.git"
+    "url": "git+https://github.com/overskul/ALauncher.git"
   },
   "bugs": {
-    "url": "https://github.com/deadlyjack/acode/issues"
+    "url": "https://github.com/overskul/ALauncher/issues"
   },
-  "homepage": "https://github.com/deadlyjack/acode#readme",
+  "homepage": "https://github.com/overskul/ALauncher#readme",
   "devDependencies": {
     "@babel/core": "^7.28.0",
     "@babel/plugin-transform-runtime": "^7.28.0",

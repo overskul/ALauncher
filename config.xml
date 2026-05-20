@@ -1,14 +1,14 @@
 <?xml version='1.0' encoding='utf-8' ?>
-<widget id="com.foxdebug.acode" android-versionCode="967" version="1.11.8"
+<widget id="overskul.alauncher" android-versionCode="001" version="0.0.1"
     xmlns="http://www.w3.org/ns/widgets"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Acode</name>
+    <name>ALauncher</name>
     <description>
-        Light weight code editor and web IDE for android.
+        Android launcher but as a code editor
     </description>
-    <author email="ajit@foxdebug.com" href="https://foxdebug.com">
-       Foxdebug
+    <author email="overskul6@gmail.com" href="https://github.com/overskul">
+       Overskul
     </author>
     <content src="index.html" />
     <access launch-external="yes" origin="*" />
@@ -83,7 +83,7 @@
             <uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE" />
             <uses-permission android:name="android.permission.VIBRATE" />
         </config-file>
-        
+
         <config-file target="AndroidManifest.xml" parent="/manifest">
             <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
         </config-file>
