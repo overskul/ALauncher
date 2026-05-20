@@ -16,7 +16,7 @@
       "platform": "35",
       "build_tools": "35.0.0"
     },
-    "ghcr.io/devcontainers/features/node:1": {
+    "ghcr.io/devcontainers/features/node:2": {
       "nodeGypDependencies": false,
       "installYarnUsingApt": false,
       "version": "lts",
