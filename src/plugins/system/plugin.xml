@@ -30,9 +30,6 @@
       </intent-filter>
     </config-file>
 
-    <hook type="before_prepare" src="utils/resetProvider.js" />
-    <hook type="after_prepare" src="utils/fixProvider.js" />
-
     <resource-file src="res/android/file_provider.xml" target="res/xml/file_provider.xml" />
     <resource-file src="res/android/icon.ttf" target="assets/font/icon.ttf" />
     <source-file src="android/com/foxdebug/system/Ui.java" target-dir="src/com/foxdebug/system"/>

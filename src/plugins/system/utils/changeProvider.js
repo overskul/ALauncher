@@ -1,6 +1,6 @@
 module.exports = {
   changeProvider(reset) {
-    const fs = require('fs');
+   /* const fs = require('fs');
     const path = require('path');
 
 
@@ -33,6 +33,6 @@ module.exports = {
     } catch (error) {
       console.error(error);
       process.exit(1);
-    }
+    }*/
   }
 };

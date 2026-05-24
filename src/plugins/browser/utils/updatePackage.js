@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-
+/*
 const configXML = path.resolve(__dirname, "../../../config.xml");
 const menuJava = path.resolve(__dirname, "../../../platforms/android/app/src/main/java/com/foxdebug/browser/Menu.java");
 const repeatChar = (char, times) => {
@@ -28,4 +28,4 @@ try {
 } catch (error) {
   console.error(error);
   process.exit(1);
-}
+}*/
