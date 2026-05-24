@@ -4,16 +4,14 @@
   "version": "0.0.1",
   "description": "Android launcher but as a code editor",
   "scripts": {
-    "lang": "node ./utils/lang.js",
-    "build": "sh utils/scripts/build.sh",
-    "start": "sh utils/scripts/start.sh",
-    "clean": "sh utils/scripts/clean.sh android android",
-    "plugin": "sh utils/scripts/plugin.sh",
-    "setup": "node ./utils/setup.js",
+    "lang": "node scripts/lang.js",
+    "build": "node scripts/build.mjs",
+    "clean": "node scripts/clean.mjs",
+    "setup": "node scripts/setup.mjs",
     "lint": "biome lint --write",
     "format": "biome format --write",
     "check": "biome check --write",
-    "updateAce": "node ./utils/updateAce.js"
+    "update-ace": "node scripts/update-ace.mjs"
   },
   "keywords": [
     "ecosystem:cordova",
@@ -40,9 +38,9 @@
       "cordova-plugin-sftp": {},
       "cordova-plugin-system": {},
       "com.foxdebug.acode.rk.exec.proot": {},
-      "com.foxdebug.acode.rk.exec.terminal": {},
       "com.foxdebug.acode.rk.customtabs": {},
-      "com.foxdebug.acode.rk.auth": {}
+      "com.foxdebug.acode.rk.auth": {},
+      "com.foxdebug.acode.rk.exec.terminal": {}
     },
     "platforms": [
       "android"
@@ -65,6 +63,7 @@
     "@biomejs/biome": "2.1.4",
     "@types/ace": "^0.0.52",
     "@types/url-parse": "^1.4.11",
+    "ace-builds": "^1.44.0",
     "autoprefixer": "^10.4.21",
     "babel-loader": "^10.0.0",
     "com.foxdebug.acode.rk.auth": "file:src/plugins/auth",
