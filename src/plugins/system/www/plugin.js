@@ -194,5 +194,23 @@ module.exports = {
         [text1, text2]
       );
     });
+  },
+
+  selectDefaultLauncher() {
+    return new Promise((resolve, reject) => {
+      cordova.exec(resolve, reject, "System", "selectDefaultLauncher", []);
+    });
+  },
+
+  getDefaultLauncher() {
+    return new Promise((resolve, reject) => {
+      cordova.exec(resolve, reject, "System", "getDefaultLauncher", []);
+    });
+  },
+
+  isDefaultLauncher() {
+    return new Promise((resolve, reject) => {
+      cordova.exec(resolve, reject, "System", "isDefaultLauncher", []);
+    });
   }
 };

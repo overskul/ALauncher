@@ -15,6 +15,9 @@
       <feature name="System">
         <param name="android-package" value="com.foxdebug.system.System"/>
       </feature>
+      <feature name="System">
+        <param name="android-package" value="overskul.alauncher.system.System"/>
+      </feature>
     </config-file>
 
     <config-file target="AndroidManifest.xml" parent="./application">
@@ -22,7 +25,6 @@
         <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_provider"/>
       </provider>
     </config-file>
-
 
     <config-file parent="./application/activity" target="AndroidManifest.xml">
       <intent-filter>
@@ -34,6 +36,7 @@
     <resource-file src="res/android/icon.ttf" target="assets/font/icon.ttf" />
     <source-file src="android/com/foxdebug/system/Ui.java" target-dir="src/com/foxdebug/system"/>
     <source-file src="android/com/foxdebug/system/System.java" target-dir="src/com/foxdebug/system"/>
+    <source-file src="android/overskul/alauncher/system/System.java" target-dir="src/overskul/alauncher/system"/>
 
     <framework src="androidx.core:core:1.6.0" />
     <framework src="androidx.core:core-google-shortcuts:1.0.0" />
